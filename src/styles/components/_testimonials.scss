@@ -1,0 +1,74 @@
+@import "../utilities//variables";
+
+.testimonials-container {
+  max-width: 70rem;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  .testimonials-box {
+    flex: 1;
+    margin: 1rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-secondary;
+
+    .upperbox {
+      padding: 1.5rem;
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+
+
+      span {
+        font-size: 1rem;
+        padding-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1rem;
+        text-align: center;
+      }
+    }
+
+    .lowerbox {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .portrait {
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+        border: .5rem solid white;
+
+        img {
+          width: 100%;
+          border-radius: 50%;
+        }
+      }
+
+      .names {
+        padding: 1rem;
+
+        p:nth-of-type(1) {
+          font-size: 1.2rem;
+          font-weight: bold;
+          padding-bottom: .2rem;
+          color: white;
+        }
+
+        p:nth-of-type(2) {
+          font-size: .9rem;
+          color: white;
+        }
+      }
+    }
+  }
+}

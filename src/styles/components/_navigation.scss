@@ -1,0 +1,132 @@
+@import "../utilities/variables";
+
+.nav-container {
+  position: sticky;
+  top: 0;
+  padding-top: .2rem;
+  margin: .5rem 0;
+  z-index: 999;
+  background-color: $color-tertiary;
+}
+
+.nav-section {
+  // border: 1px solid black;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 4.5rem;
+  margin: 1rem 5rem 0 5rem;
+
+
+  .nav-logo {
+    width: 11rem;
+    position: absolute;
+    left: 0;
+    top: -.5rem;
+    margin-left: .9rem;
+    cursor: pointer;
+  }
+
+  .nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0 auto;
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: $color-secondary;
+    }
+  }
+
+  .nav-list {
+    font-size: 1rem;
+    color: $color-primary;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .nav-btn-box {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: -.2rem;
+    right: 0;
+    height: 100%;
+    margin-right: .9rem;
+
+    .nav-btn {
+      background-color: black;
+      color: $color-tertiary;
+      border-radius: 2rem;
+      padding: .7rem 2.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+
+  .nav-burger {
+    display: none;
+  }
+
+  @media (max-width: 900px) {
+
+    .nav-menu, .nav-btn-box {
+      display: none;
+    }
+
+    .nav-burger-icon {
+      width: 70%;
+      height: 100%;
+      color: $color-primary;
+    }
+  
+    .nav-burger {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      // border: 1px solid black;
+      height: 100%;
+      right: 0;
+      margin-right: .9rem;
+      // width: 4rem;
+    } 
+  } 
+}
+
+.mobile-nav-menu {
+  // border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 85vh;
+
+  .mobile-nav-list {
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+    color: $color-primary;
+    text-transform: uppercase;
+  }
+  
+  a:hover {
+    color: $color-secondary;
+  }
+}
+
+@media (max-width: 500px) {
+  .nav-section {
+    margin: 2rem 0;
+  }
+}

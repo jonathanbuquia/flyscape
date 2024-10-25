@@ -1,0 +1,198 @@
+@import "../utilities/variables";
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-plane {
+  position: absolute;
+  top: -1rem;
+  right:-20rem;
+  max-width: 68rem;
+}
+
+.hero-container {
+  background-image: url("../../assets/hero/hero_bg.jpg");
+  background-size: cover;
+  border-radius: 3rem;
+  margin: 0 4rem;
+  overflow: hidden;
+
+  // border: 1px solid black;
+
+  .hero-titles {
+    margin-left: 5rem;
+    padding-top: 8rem;
+
+    p {
+      font-size: 1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-size: 5rem;
+      padding-bottom: 3rem;
+    }
+
+    button {
+      background-color: $color-secondary;
+      color: white;
+      padding: 1rem 3rem;
+      border: none;
+      border-radius: 2rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+
+  .hero-places {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    margin-left: 5rem;
+    max-width: 25rem;
+    border-radius: 2rem;
+    padding: 1rem 1.5rem;
+    background-color: rgba(255, 255, 255, .5);
+
+    span:first-of-type {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    .hero-infos {
+      display: flex;
+      padding: .5rem 0;
+
+      .hero-circles-img {
+        position: relative;
+        width: 15rem;
+  
+        .circles-icons {
+          position: absolute;
+          width: 3rem;
+          height: 3rem;
+          border-radius: 50%;
+          border: .3rem solid white;
+          object-fit: cover;
+        }
+
+        .second-icon {
+          margin-left: 2rem;
+        }
+        .third-icon {
+          margin-left: 4rem;
+        }
+        .fourth-icon {
+          margin-left: 6rem;
+        }
+        .fifth-icon {
+          margin-left: 8rem;
+        }
+      }
+
+      .hero-circles-infos {
+        // margin-left: 12rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: .2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    // text-align: center;
+
+    .hero-titles {
+      margin-left: 0;
+      text-align: center;
+    }
+
+    .hero-places {
+      margin-left: 0;
+      margin-bottom: 15rem;
+
+      .hero-sub {
+        text-align: center;
+      }
+    }
+  }
+
+  .hero-plane {
+    width: 50rem;
+    top: 48rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 850px) {
+
+  .hero-plane {
+    width: 40rem;
+  }
+}
+
+@media (max-width: 840px) {
+
+  .hero-container {
+    margin: 0 1rem;
+  }
+
+  .hero-plane {
+    width: 30rem;
+    top: 49rem;
+  }
+}
+
+@media (max-width: 740px) {
+  .hero-plane {
+    width: 30rem;
+    top: 55rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-container {
+    margin: 0 1rem;
+
+    .hero-titles {
+      h1 {
+        font-size: 3rem;
+      }
+    }
+    .hero-plane {
+      width: 25rem;
+      top: 48rem;
+    }
+
+    .hero-infos {
+      display: flex;
+      flex-direction: column;
+      margin-left: 0;
+      text-align: center;
+      
+      .circles-icons {
+        position: absolute;
+        left: 2rem;
+      }
+
+      .hero-circles-infos {
+        margin-top: 3.5rem;
+      }
+    }
+  }
+}
