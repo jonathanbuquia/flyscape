@@ -1,5 +1,5 @@
 import "../styles/components/_navigation.scss";
-import logo from "../assets/Logo/flyscape.png";
+import logo from "../assets/logo/flyscape.png";
 
 import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineClose } from "react-icons/ai";
